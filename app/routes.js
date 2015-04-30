@@ -1,6 +1,6 @@
 define([
         'angular',
-        'app',
+        './app',
     ],
     function (angular, app) {
         'use strict';

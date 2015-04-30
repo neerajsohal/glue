@@ -1,5 +1,5 @@
 define([
-    './searchController'
+    './homeController'
 ], function () {
     'use strict';
 });

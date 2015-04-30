@@ -1,5 +1,6 @@
 require.config({
-    baseUrl: './src/',
+    baseUrl: './glue/',
+    waitSeconds : 20, //make sure it is enough to load all scripts
     paths: {
         "angular": "../vendor/angular/angular",
         'ionic': '../vendor/ionic/release/js/ionic',
@@ -9,7 +10,11 @@ require.config({
         'angular-sanitize': '../vendor/angular-sanitize/angular-sanitize',
         'angular-animate': '../vendor/angular-animate/angular-animate',
 
+        'ng-cordova': "../vendor/ngCordova/dist/ng-cordova.min",
+        
         "text": "../vendor/requirejs-text/text",
+        "async": '../vendor/requirejs-plugins/src/async',
+        'underscore' : '../vendor/underscore/underscore',
     },
     shim : {
         'angular' : {
@@ -30,7 +35,11 @@ require.config({
                 'angular-sanitize',
                 'angular-ui-router'
             ]
-        }
+        },
+        'ng-cordova' : {
+            exports: 'ngCordova'
+        },
+
     }
 
 });    

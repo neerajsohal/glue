@@ -36,7 +36,11 @@ gulp.task('index', function() {
 });
 
 gulp.task('views', function() {
-    gulp.src(['resources/views/**/*']).pipe(gulp.dest(destFolder + '/resources/views'));
+    gulp.src(['resources/views/**/*']).pipe(gulp.dest(destFolder + '/views'));
+});
+
+gulp.task('images', function() {
+    gulp.src(['resources/assets/images/**/*']).pipe(gulp.dest(destFolder + '/statics/images/'));
 });
 
 gulp.task('fonts', function() {
@@ -44,7 +48,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.run('index', 'styles', 'scripts', 'fonts', 'views');
+    gulp.run('index', 'styles', 'scripts', 'fonts', 'views', 'images');
  
     gulp.watch('./app/**/*.js', function(event) {
         gulp.run('scripts');
@@ -61,5 +65,11 @@ gulp.task('watch', function() {
     gulp.watch(['resources/views/**/*'], function(event) {
         gulp.run('views');
     })
+        
+    gulp.watch(['resources/assets/images/**/*'], function(event) {
+        gulp.run('images');
+    })
+
+
 
 })

@@ -27,6 +27,6 @@
     findNestedDependencies: true,
     // For test purposes, the output is not minified.
     // In the real world this would be set to uglify, uglify2, or to closure
-    optimize: 'uglify2',
+    optimize: 'none',
     preserveLicenseComments: false
 })

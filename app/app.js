@@ -1,6 +1,6 @@
 define([
         'angular',
-        'namespace',
+        './namespace',
         './core/namespace',
         './modules/home/namespace',
 
@@ -8,14 +8,14 @@ define([
         'angular-animate',
         'angular-ui-router',
         'ionic-angular',
-        'routes',
+        'ng-cordova',
+        './routes',
 
         './core/module.require',
         './modules/home/module.require',
     ],
     function(angular, namespace,
         namespaceCore,
-
         namespaceHome
     ) {
         'use strict';
@@ -26,7 +26,6 @@ define([
             'ui.router',
 
             namespaceCore,
-
             namespaceHome
 
         ]).run(function() {

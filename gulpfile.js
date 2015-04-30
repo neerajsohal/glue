@@ -30,7 +30,8 @@ gulp.task('index', function() {
 			src: [['statics/js/application.js', 'statics/js/require.js']],
 			tpl: '<script data-main="%s" src="%s"></script>'
 		},
-        'css' : 'statics/css/application.css'
+        'css' : 'statics/css/application.css',
+        'cordova' : '<script type="text/javascript" src="cordova.js"></script><script type="text/javascript" src="cordova_plugins.js"></script>'
     }))
     .pipe(gulp.dest(destFolder));
 });

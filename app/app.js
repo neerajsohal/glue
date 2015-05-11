@@ -8,7 +8,6 @@ define([
         'angular-animate',
         'angular-ui-router',
         'ionic-angular',
-        'ng-cordova',
         './routes',
 
         './core/module.require',

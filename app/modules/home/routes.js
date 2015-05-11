@@ -14,7 +14,7 @@ define([
                 $stateProvider
                     .state('home', {
                         url: '',
-                        templateUrl: '/views/' + namespace.split('.')[1] + '/index.html',
+                        templateUrl: 'views/' + namespace.split('.')[1] + '/index.html',
                         controller : namespace + '.' + namespace.split('.')[1] + 'Controller'
                     })
             }
